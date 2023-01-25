@@ -585,7 +585,8 @@ nav ul li {
 #logo {
   color: #232323;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  transition: 0.3s;
 }
 
 #highlight {
@@ -619,7 +620,7 @@ img {
   color: #e83f43;
 }
 .intro .title .underline {
-  color: #232323;
+  color: #000000;
 }
 
 .description {
@@ -732,7 +733,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: rgb(255, 255, 255);
   transform-origin: 100% 50%;
   animation: revealRight 1s cubic-bezier(0.23, 1, 0.75, 1) forwards;
 }
@@ -788,8 +789,9 @@ button {
   width: 100%;
   left: 0;
   padding: 1rem;
-  background: #fff;
+  background: rgb(255, 255, 255);
   text-align: center;
+  transition: 0.3s;
 }
 .flex-nav ul.active {
   display: flex;
@@ -800,9 +802,7 @@ button {
     justify-content: flex-end;
   }
 
-  #logo {
-    font-size: 1.25rem;
-  }
+  
 
   .controls {
     padding: 1.75rem 0 1.75rem 0;
@@ -814,7 +814,7 @@ button {
   .intro .title {
     font-size: 4.25rem;
     padding: 2.5rem 2.5rem 3rem 2.5rem;
-    background: #fff;
+    background: rgb(255, 255, 255);
   }
 
   img {
@@ -876,3 +876,49 @@ button {
   white-space: nowrap;
   width: 1px;
 }
+
+input[type=checkbox] {
+  display:none;
+}
+input[type=checkbox] + .dmlabel {
+  display:inline-block;
+  padding: 0 0 0 0px;
+  background:url(LMflower.jpg) no-repeat;
+  height: 35px;
+  width: 35px;
+  background-size: 100%;
+  margin-left: 85%;
+  margin-top: 0%;
+}
+input[type=checkbox]:checked + .dmlabel{
+  background:url(DMflowerparisa.jpg) no-repeat;
+  height: 35px;
+  width: 35px;
+  display:inline-block;
+  background-size: 100%; 
+}
+#backgrounddmdm{
+  background: white;
+  width: 130000px;
+  height:994px;
+  transition: 0.3s;
+  z-index: -999;
+  position:absolute;
+  top: 0px;
+  
+}
+
+input:checked + .dmlabel + #backgrounddmdm{
+  background: black;
+  z-index: -1;
+    
+}
+input:checked + .dmlabel + #backgrounddmdm + .flex-nav ul{
+  background: black;
+} 
+input:checked + .dmlabel + #backgrounddmdm + .flex-nav ul + #logo{
+  color: white;
+} 
+
+
+
